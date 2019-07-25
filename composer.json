@@ -1,0 +1,43 @@
+{
+    "name": "oedu/oeduhelper",
+    "description": ":description",
+    "license": "license",
+    "authors": [
+        {
+            "name": "Jefferson Babuyo",
+            "email": "jefferson@online-edu.com",
+            "homepage": "online-edu.com"
+        }
+    ],
+    "homepage": "https://github.com/oedu/oeduhelper",
+    "keywords": ["Laravel", "oeduhelper"],
+    "require": {
+        "illuminate/support": "~5"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~7.0",
+        "mockery/mockery": "^1.1",
+        "orchestra/testbench": "~3.0",
+        "sempro/phpunit-pretty-print": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "oedu\\oeduhelper\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "oedu\\oeduhelper\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "oedu\\oeduhelper\\oeduhelperServiceProvider"
+            ],
+            "aliases": {
+                "oeduhelper": "oedu\\oeduhelper\\Facades\\oeduhelper"
+            }
+        }
+    }
+}
