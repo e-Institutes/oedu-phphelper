@@ -1,0 +1,43 @@
+{
+    "name": "e-institutes/oedu-phphelper",
+    "description": ":description",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jefferson Babuyo",
+            "email": "jefferson@online-edu.com",
+            "homepage": "online-edu.com"
+        }
+    ],
+    "homepage": "https://github.com/e-Institutes/oedu-phphelper",
+    "keywords": ["Laravel", "Oeduhelper"],
+    "require": {
+        "illuminate/support": "~5"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~7.0",
+        "mockery/mockery": "^1.1",
+        "orchestra/testbench": "~3.0",
+        "sempro/phpunit-pretty-print": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Oedu\\Oeduhelper\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Oedu\\Oeduhelper\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Oedu\\Oeduhelper\\OeduhelperServiceProvider"
+            ],
+            "aliases": {
+                "Oeduhelper": "Oedu\\Oeduhelper\\Facades\\Oeduhelper"
+            }
+        }
+    }
+}
