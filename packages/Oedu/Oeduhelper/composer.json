@@ -9,7 +9,7 @@
             "homepage": "online-edu.com"
         }
     ],
-    "homepage": "https://github.com/oedu/oeduhelper",
+    "homepage": "https://github.com/e-Institutes/oedu-phphelper",
     "keywords": ["Laravel", "Oeduhelper"],
     "require": {
         "illuminate/support": "~5"
