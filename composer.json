@@ -34,8 +34,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Oedu\\Oeduhelper\\": "packages/Oedu/Oeduhelper/src",
-            "App\\": "app/"
+            "Oedu\\Oeduhelper\\": "packages/Oedu/Oeduhelper/src"
         },
         "classmap": [
             "database/seeds",
