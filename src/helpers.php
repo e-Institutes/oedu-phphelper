@@ -96,8 +96,8 @@ if ( !function_exists('currencyFormat') ) {
             break;
             default:
                 $price = $amount;
-            break;    
-        } 
+            break;
+        }
 
 
 JS
@@ -166,3 +166,35 @@ VEF Bs. 208,29
 ZAR R 354.13
 
 */
+
+/**
+ * Gets web site host name.
+ */
+if (! function_exists('web_host_name')) {
+    function web_host_name(array $site)
+    {
+        $env = app()->environment();
+
+        if ($env == 'production') {
+            return $site['domain'];
+        }
+
+        return $site['site_code'] . '.' . $env . '.' . config('app.site_local_domain');
+    }
+}
+
+/**
+ * Gets app site host name.
+ */
+if (! function_exists('app_host_name')) {
+    function app_host_name(array $site)
+    {
+        $env = app()->environment();
+
+        if ($env == 'production') {
+            return str_replace_first('www', 'app', $site['domain']);
+        }
+
+        return $site['site_code'] . '-app.' . $env . '.' . config('app.site_local_domain');
+    }
+}
